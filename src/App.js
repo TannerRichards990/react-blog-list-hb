@@ -6,13 +6,13 @@ import BlogCard from './components/BlogCard/BlogCard';
 import useBlogs from './hooks/blogs';
 
 function App() {
-  // const blogs = useBlogs();
-  // return (
-  //   <section className="main">
-  //     <Header />
-  //     {blogs.map((itm) => (
-  //       <BlogCard {...itm} key={itm.id} />
-  //     ))}
+  const blogs = useBlogs();
+  return (
+    <section className="main">
+      <Header />
+      {blogs.map((itm) => (
+        <BlogCard {...itm} key={itm.id} />
+      ))}
 
       
       
