@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <section className="main">
       {blogs.map((blog) => (
-        <BlogCard key={blog.id} blog={blog} />
+        <BlogCard key={blog.id} {...blog} />
       ))}
     </section>
   );
