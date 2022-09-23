@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 import { getBlogs } from '../services/blogs';
 
-export default function useBlogs() {
+export function useBlogs() {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    const fetchBlogs = async () => {
-      const resp = await getBlogs();
-      setBlogs(resp);
-    };  
-    fetchBlogs();
+    async function fetchData() {
+      const data = await getBlogs();
+      setBlogs(data);
+    }
+    fetchData();
   }, []);
   return blogs;
 }
+
+
 
